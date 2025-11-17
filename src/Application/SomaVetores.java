@@ -36,8 +36,5 @@ public class SomaVetores {
             System.out.println(vectorSumOfPosition[i]);
         }
 
-
-
-
     }
 }
