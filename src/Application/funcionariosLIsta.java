@@ -12,7 +12,7 @@ public class funcionariosLIsta {
         Scanner scanner = new Scanner(System.in);
         Locale.setDefault(Locale.US);
 
-        System.out.println("Quantos funcionários serão registrados?");
+    System.out.println("\033[9m" + "Quantos funcionários serão registrados?" + "\033[9m");
         int quantidadeFuncionarios = scanner.nextInt();
         List<Funcionario> list = new ArrayList();
 
