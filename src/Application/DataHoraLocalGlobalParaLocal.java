@@ -15,7 +15,16 @@ public class DataHoraLocalGlobalParaLocal {
         // ZoneId.getAvailableZoneIds();
 
         // Converte o fuso horário global em Local
-        LocalDate r1 = LocalDate.ofInstant(d06, ZoneId.systemDefault());
-        System.out.println(r1);
+        LocalDateTime r1 = LocalDateTime.ofInstant(d06, ZoneId.systemDefault());
+        System.out.println("r1 = " + r1);
+
+        System.out.println("d04 dia = " + d04.getDayOfMonth());
+        System.out.println("d04 dia do ano = " + d04.getDayOfYear());
+        System.out.println("d04 dia da semana = " + d04.getDayOfWeek());
+
+        System.out.println("r1 horas = " + r1.getHour());
+        System.out.println("r1 minutos = " + r1.getMinute());
+        System.out.println("r1 segundos = " + r1.getSecond());
+
     }
 }
