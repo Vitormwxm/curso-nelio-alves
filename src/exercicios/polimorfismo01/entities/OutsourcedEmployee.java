@@ -1,4 +1,4 @@
-package exercicios.entities;
+package exercicios.polimorfismo01.entities;
 
 public class OutsourcedEmployee extends Employee{
     private Double additionalCharge;
