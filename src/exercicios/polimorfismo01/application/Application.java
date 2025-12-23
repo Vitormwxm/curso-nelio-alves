@@ -1,7 +1,7 @@
-package exercicios.application;
+package exercicios.polimorfismo01.application;
 
-import exercicios.entities.Employee;
-import exercicios.entities.OutsourcedEmployee;
+import exercicios.polimorfismo01.entities.Employee;
+import exercicios.polimorfismo01.entities.OutsourcedEmployee;
 
 import java.util.ArrayList;
 import java.util.List;

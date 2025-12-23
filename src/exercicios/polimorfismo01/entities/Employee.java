@@ -1,7 +1,4 @@
-package exercicios.entities;
-
-import java.util.ArrayList;
-import java.util.List;
+package exercicios.polimorfismo01.entities;
 
 public class Employee {
     protected String name;
