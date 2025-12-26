@@ -14,8 +14,10 @@ public class Application {
             System.out.println("Name: " + vect[position]);
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Acessou uma posição inexistente no array");
+            e.printStackTrace();
         } catch (InputMismatchException e) {
             System.out.println("O valor digitado foi diferente de inteiro");
+            e.printStackTrace();
         }
 
         System.out.println("Fim do programa");
