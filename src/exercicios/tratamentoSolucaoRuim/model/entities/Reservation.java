@@ -1,5 +1,7 @@
 package exercicios.tratamentoSolucaoRuim.model.entities;
 
+import exercicios.tratamentoSolucaoRuim.model.exceptions.DomainException;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
@@ -12,7 +14,11 @@ public class Reservation {
     // precisa apenas de um simpleDateFormat por isso esse método é estático.
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
-    public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+    public Reservation(Integer roomNumber, Date checkIn, Date checkOut) throws DomainException{
+        if (!checkOut.after(checkIn)) {
+            throw new DomainException ("Checkout date must be after check-in date");
+        }
+
         this.roomNumber = roomNumber;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -40,20 +46,20 @@ public class Reservation {
         return timeInDays;
     }
 
-    public String updateDates(Date checkIn, Date checkOut) {
+    public void updateDates(Date checkIn, Date checkOut) throws DomainException {
 
         Date now = new Date();
         if (checkIn.before(now) || checkOut.before(now)) {
-            return "Reservation dates for updates must be future";
+            throw new DomainException("Reservation dates for updates must be future"); // Illegal é erros no argumento do método
         }
 
         if  (!checkOut.after(checkIn)) {
-            return "Error in reservation: Checkout date must be after checkin date";
+            throw new DomainException("Error in reservation: Checkout date must be after checkin date");
         }
 
         this.checkIn = checkIn;
         this.checkOut = checkOut;
-        return null;
+
     }
 
     @Override
