@@ -6,12 +6,8 @@ public class Application01 {
     public static void main(String[] args) {
 
         String filePath = "/home/vitor/arquivo.txt";
-        FileReader fileReader = null;
-        BufferedReader bufferedReader = null;
 
-        try {
-            fileReader = new FileReader(filePath);
-            bufferedReader = new BufferedReader(fileReader); // bufferedReader é estanciado a partir do fileReader
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(filePath))){
 
             String line = bufferedReader.readLine();
 
@@ -22,19 +18,6 @@ public class Application01 {
 
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
-        } finally {
-            try {
-                if (bufferedReader != null) {
-                    bufferedReader.close();
-                }
-
-                if (fileReader != null) {
-                    fileReader.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
         }
     }
 }
