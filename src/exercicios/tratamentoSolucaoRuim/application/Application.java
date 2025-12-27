@@ -1,6 +1,7 @@
 package exercicios.tratamentoSolucaoRuim.application;
 
 import exercicios.tratamentoSolucaoRuim.model.entities.Reservation;
+import exercicios.tratamentoSolucaoRuim.model.exceptions.DomainException;
 
 import javax.xml.transform.Source;
 import java.text.ParseException;
@@ -21,7 +22,6 @@ public class Application {
             System.out.println("Checkout date: ");
             Date checkout = sdf.parse(scanner.next());
 
-
             System.out.println("Error in reservation: Checkout date must be after checkin date");
 
             Reservation reservation = new Reservation(number, checkin, checkout);
@@ -38,7 +38,7 @@ public class Application {
         } catch (ParseException e) {
             System.out.println("Invalid date format");
             e.printStackTrace();
-        } catch (IllegalArgumentException e) {
+        } catch (DomainException e) {
             System.out.println("Error in reservation: " + e.getMessage());
         }
 
