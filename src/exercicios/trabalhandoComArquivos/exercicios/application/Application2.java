@@ -3,10 +3,7 @@ package exercicios.trabalhandoComArquivos.exercicios.application;
 import exercicios.trabalhandoComArquivos.exercicios.entities.Product;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class Application2 {
@@ -37,13 +34,20 @@ public class Application2 {
             }
 
 
-            for (Product p : product.getList()) {
-                System.out.println(p.getProduct());
-            }
-
-
         } catch (IOException e) {
             System.out.println("Erro: " + e.getMessage());
         }
+
+        System.out.println("Digite o nome da pasta que você deseja criar");
+
+        String fileName = scanner.nextLine();
+        File fileStrPath = new File(strPath);
+        boolean file = new File(fileStrPath.getParent() + "/" + fileName).mkdir();
+        System.out.println(file);
+//        try (BufferedWriter wr = new BufferedWriter(new FileWriter(fileName))){
+//
+//        } catch (IOException e) {
+//
+//        }
     }
 }
