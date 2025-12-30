@@ -17,7 +17,7 @@ public class Application {
 
             List<String> words = new ArrayList<>();
 
-            String lines = bufferedReader.readLine();
+            String lines = bufferedReader.readLine(); // ler a próxima linha
             while (lines != null) {
                 String[] wordLine = lines.split(",");
 
