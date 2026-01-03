@@ -1,13 +1,8 @@
-package exercicios.interfaces.model.entities;
+package exercicios.interfaces.exercicio.model.entities;
 
 public class Invoice {
-
-    private Double basicPayment;
-    private Double tax;
-
-    public Invoice() {
-
-    }
+   private Double basicPayment;
+   private Double tax;
 
     public Invoice(Double basicPayment, Double tax) {
         this.basicPayment = basicPayment;
@@ -18,8 +13,8 @@ public class Invoice {
         return basicPayment;
     }
 
-    public void setBasicPayment(Double basicPayment) {
-        this.basicPayment = basicPayment;
+    public void setBasicPayment(Double basicPayement) {
+        this.basicPayment = basicPayement;
     }
 
     public Double getTax() {
@@ -33,5 +28,4 @@ public class Invoice {
     public Double totalPayment() {
         return getBasicPayment() + getTax();
     }
-
 }

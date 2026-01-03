@@ -1,9 +1,9 @@
-package exercicios.interfaces.application;
+package exercicios.interfaces.aula.application;
 
-import exercicios.interfaces.model.entities.CarRental;
-import exercicios.interfaces.model.entities.Vehicle;
-import exercicios.interfaces.model.services.BrazilTaxService;
-import exercicios.interfaces.model.services.RentalService;
+import exercicios.interfaces.aula.model.entities.CarRental;
+import exercicios.interfaces.aula.model.entities.Vehicle;
+import exercicios.interfaces.aula.model.services.BrazilTaxService;
+import exercicios.interfaces.aula.model.services.RentalService;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;

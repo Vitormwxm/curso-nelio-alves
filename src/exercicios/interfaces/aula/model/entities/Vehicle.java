@@ -1,4 +1,4 @@
-package exercicios.interfaces.model.entities;
+package exercicios.interfaces.aula.model.entities;
 
 public class Vehicle {
 
