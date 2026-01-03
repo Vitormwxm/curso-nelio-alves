@@ -1,7 +1,7 @@
-package exercicios.interfaces.model.services;
+package exercicios.interfaces.aula.model.services;
 
-import exercicios.interfaces.model.entities.CarRental;
-import exercicios.interfaces.model.entities.Invoice;
+import exercicios.interfaces.aula.model.entities.CarRental;
+import exercicios.interfaces.aula.model.entities.Invoice;
 
 import java.time.Duration;
 
